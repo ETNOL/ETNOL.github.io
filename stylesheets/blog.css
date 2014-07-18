@@ -1,0 +1,10 @@
+body {
+	font: 1em Helvetica, arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	color: #333333;
+	margin:2em;
+}
+
+body a {
+	text-decoration: none;
+	color:#919;
+}

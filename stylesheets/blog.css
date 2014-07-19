@@ -3,7 +3,7 @@ body {
 	font-weight:300;
 	color: #333333;
 	margin:2em;
-	background:url("subway-lines.png");
+	/*background:url("subway-lines.png");*/
 	position:absolute;
 }
 

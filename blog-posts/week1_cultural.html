@@ -19,6 +19,34 @@
 				I'm certain the future will be delightful.
 			</p>
 		</div>
+		<script>
+		var backgrounds_array = [
+			"images/alchemy.gif",
+			"images/brijan.gif",
+			"images/bunting-flag.png",
+			"images/escape-flight.png",
+			"images/flowers.jpg",
+			"images/kitty.png",
+			"images/leather-nunchuck.png",
+			"images/magnus-2051.png",
+			"images/nyc-candy.png",
+			"images/plaid.jpg",
+			"images/quake.png",
+			"images/retro-furnish.png",
+			"images/ripples.jpg",
+			"images/science.png",
+			"images/subway-lines.png",
+			"images/sushi.png"
+		];
+		//var body = document.getElementsByTagName("body")[0];
+		var selection = Math.floor((Math.random() * backgrounds_array.length) + 1);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(" + background + ")";
+		};
 
+
+
+		</script>
 	</body>
 </html>

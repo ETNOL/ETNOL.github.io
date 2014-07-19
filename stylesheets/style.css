@@ -1,3 +1,11 @@
-html {
+body {
+	font: 2em Helvetica, arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	color: #333333;
+	margin:2em;
+	background-color:#fefefe;
+}
 
+a {
+	text-decoration: none;
+	color:rgb(30, 100, 211);
 }

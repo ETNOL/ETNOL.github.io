@@ -1,0 +1,26 @@
+body {
+	font: 1em Helvetica, arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight:300;
+	color: #333333;
+	margin:2em;
+	/*background:url("subway-lines.png");*/
+	position:absolute;
+}
+
+body a {
+	text-decoration: none;
+	color:#919;
+}
+
+#main {
+	background:rgba(244, 247, 234, 0.95);
+	margin:1em;
+	padding:1em;
+	max-width:50em;
+}
+
+#background {
+	height:100%;
+	width:100%;
+
+}

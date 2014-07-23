@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	font-family:helvetica;
+
+}
+
+body {
+
+}
+
+hgroup {
+	padding:5%;
+}
+
+.header {
+border-bottom:2px solid #333;
+background-color:#eee;
+font-family:;
+width:;
+height:;
+}
+
+.main {
+	padding:3%;
+}
+
+.main div {
+	margin:3%;
+	background-color:#eee;
+	border:1px solid #eee;
+	border-radius:3px;
+	padding:2%;
+}
+
+.main div h3 {
+	padding-bottom:2%;
+}
+
+.title {
+	font-size:1.1em;
+	font-weight:600;
+}
+
+#sidebar {
+	display:none;
+	margin:3%;
+	background-color:#eee;
+	border:1px solid #eee;
+	border-radius:3px;
+	padding:2%;
+	width: 15%;
+}
+
+#sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+#sidebar h3 {
+	border-bottom: 1px solid #333;
+	margin-bottom: 10px;
+}
+
+#sidebar ul a{
+	text-decoration: none;
+}
+
+@media screen and (min-width:670px) {
+	body {
+		background-color:#333;
+	}
+	hgroup {
+		margin:0 auto;
+		text-align:center;
+	}
+	hgroup br {
+		display:none;
+	}
+
+	.main div h3 {
+		text-align:center;
+
+	}
+
+}
+
+@media screen and (min-width:768px) {
+	.main div {
+		width:647px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+}
+
+@media screen and (min-width:900px) {
+	.main div {
+		font-size:1.1em;
+		padding:3%;
+	}
+	.main div h3 {
+		font-size:1.4em;
+	}
+}
+
+@media screen and (min-width:1100px) {
+	.main div {
+		margin-left: 0;
+		float: left;
+	}
+	body{
+		background-color: #333;
+
+	}
+
+	.main {
+		max-width: 1100px;
+		margin: 0 auto;
+		background-color: white;
+		height: 100%;
+		overflow: hidden;
+
+	}
+
+
+	#sidebar{
+		display: inherit;
+		float: right;
+	}
+
+}
+
+
+
+
+
+

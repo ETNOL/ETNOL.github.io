@@ -1,0 +1,20 @@
+
+    body {
+        font-family:helvetica, gotham, sans-serif;
+        width:100%;
+        background:url('http://bashooka.com/wp-content/uploads/2012/04/patterns_4.jpg') repeat repeat;
+
+    }
+
+    #main-container{
+        position:relative;
+        width:80%;
+        margin:0 auto;
+    }
+    .subhead {
+        text-align:center;
+    }
+    h2 {
+        text-align:center;
+    }
+

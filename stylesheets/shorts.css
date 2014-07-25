@@ -48,7 +48,7 @@ table {
 
 body {
 	width:100%;
-	font: 1em Helvetica, arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	font: 2em Helvetica, arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight:300;
 	color: #333333;
 }
@@ -59,15 +59,17 @@ body {
 }
 
 
-h1, h3, h4 {
-	font-weight:600;
+
+ h3, h4 {
+	font-weight:200;
 	padding:5em 0.5em 5em 0.5em;
 }
 
 h1 {
-	padding-left:2em;
+	font-weight:200;
+	padding:2em;
 	text-align:left;
-	font-size:1.8em;
+	font-size:1.6em;
 }
 
 h3 {

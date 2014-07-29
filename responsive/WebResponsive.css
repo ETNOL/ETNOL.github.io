@@ -1,0 +1,102 @@
+#nav_bar {
+	background-color: gray;
+/*	float:left;*/
+	width: 100%;
+	font-size: 1.5em;
+
+}
+#nav_bar ul
+{
+	margin: 0 auto;
+	padding: 0;
+}
+
+#nav_bar ul li
+{
+	list-style-type: none;
+	display: inline;
+}
+
+#nav_bar li a
+{
+	display: block;
+	/*float: left;*/
+	padding: 0.5% 1%;
+	color: #fff;
+	text-decoration: none;
+	border-right: 1px solid #fff;
+}
+
+#nav_bar a:hover {
+	font-family: 'Raleway', Arial;
+	background-color: green;
+}
+
+#side_bar {
+	float: right;
+	width: 100%;
+	background-color: black;
+	font-family: 'Raleway', Arial;
+	text-align: center;
+}
+#side_bar h4 {
+	color:red;
+	font-size: 1.5em;
+}
+
+#side_bar ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#side_bar ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+#side_bar li a {
+	display: block;
+	float: center;
+	padding: 1em;
+	color: #fff;
+	text-decoration: none;
+}
+
+#side_bar a:hover{
+	background-color: green;
+}
+
+#content {
+	height: 100%;
+	background-color: white;
+	font-family: 'Raleway', Arial;
+}
+
+#content h1{
+	color:red;
+	font-size: 2.5em;
+	width: 90%
+
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	padding: 2%;
+	font-family: Arial;
+	height: 5%;
+}
+
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url('font/Raleway-webfont.eot');
+    src: url('font/Raleway-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Raleway-webfont.woff') format('woff'),
+         url('font/Raleway-webfont.ttf') format('truetype'),
+         url('font/Raleway-webfont.svg#Raleway-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+

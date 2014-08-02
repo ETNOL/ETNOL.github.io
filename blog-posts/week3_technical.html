@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/blog.css">
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	</head>
+
+	<body>
+		<div id="main">
+			<h1>Technical Blog 0.1.1 </h1>
+			<div id="whySection">
+				<h2>The 'why?' technique</h2>
+				<p>There is a common technique of evaluating the underlying reasoning behind anything. You take a statement and ask why until it can no longer be answered.</p>
+				<h2>Why is Javascript popular?</h2>
+
+
+				<form id="whyForm">
+					<div class="bold" id="answer">Javascript is a popular language.</div>
+					<button id="whyButton">Why?</button>
+				</form>
+			</div>
+			<div id='turingSection'>
+				<h2>Why is Javascript popular?</h2>
+				<p>Javascript is the only browser-supported language that is Turing-complete ("can compute an answer"). Consider the form below:</p>
+				<form id="turing">
+					<p>Feel free to change the values.</p>
+					<input type='number' id='value1' value='2' maxlength="3">
+					<input type='number' id='value2' value='2' maxlength="3">
+					<button id="calculate">Calculate</button>
+					<br>
+					<div class="sum">
+						Sum:<div class="inline" id="add"></div>
+					</div>
+					<div class="difference">
+						Difference:<div class="inline" id="subtract"></div>
+					</div>
+					<div class="product">
+						Product:<div class="inline" id="multiply"></div>
+					</div>
+					<div class="quotient">
+						Quotient:<div class="inline" id="divide"></div>
+					</div>
+				</form>
+				<p>The above form sums up what it means for a language to be considered 'turing-complete'. Javascript's capability of performing the above action is what all of its popularity stems from. All the vast JS libraries, from node to D3 to Angular and everything in between, all rely on JS's ability to store, access, and manipulate values as seen above.</p>
+				<h4>Again, so why is Javascript so popular?</h4>
+				<p>My answer to this is simply because, unlike html and css, Javascript can compute an answer.</p>
+			</div>
+		</div>
+
+
+
+
+	<script type="text/javascript" src="js/calculate.js"></script>
+
+		<script>
+		var backgrounds_array = [
+			"placeholder",
+			"alchemy.gif",
+			"brijan.gif",
+			"bunting-flag.png",
+			"escape-flight.png",
+			"flowers.jpg",
+			"kitty.png",
+			"leather-nunchuck.png",
+			"magnus-2051.png",
+			"nyc-candy.png",
+			"plaid.jpg",
+			"quake.png",
+			"retro-furnish.png",
+			"ripples.jpg",
+			"science.png",
+			"subway-lines.png",
+			"sushi.png"
+		];
+		var selection = Math.floor((Math.random() * backgrounds_array.length) + 1);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(images/" + background + ")";
+		};
+
+
+
+		</script>
+	</body>
+</html>

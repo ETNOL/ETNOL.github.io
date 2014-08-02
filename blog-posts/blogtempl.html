@@ -13,7 +13,6 @@
 
 		<script>
 		var backgrounds_array = [
-			"placeholder",
 			"alchemy.gif",
 			"brijan.gif",
 			"bunting-flag.png",
@@ -31,10 +30,11 @@
 			"subway-lines.png",
 			"sushi.png"
 		];
-		var selection = Math.floor((Math.random() * backgrounds_array.length) + 1);
+		var selection = Math.floor((Math.random() * backgrounds_array.length));
+		console.log(selection);
 		var background = backgrounds_array[selection];
 		window.onload = function () {
-			document.body.style.backgroundImage ="url(" + background + ")";
+			document.body.style.backgroundImage ="url(images/" + background + ")";
 		};
 
 

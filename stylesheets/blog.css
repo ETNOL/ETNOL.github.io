@@ -42,5 +42,26 @@ button {
 	color:#fff;
 	min-width:4em;
 	text-align:center;
-
 }
+.grey {
+	color:#aaa;
+}
+
+.left {
+	float:left;
+}
+.block {
+	display:block;
+}
+.clear {
+	clear:both;
+}
+img {
+	margin: 0.2em;
+}
+
+.table {
+	height:15em;
+}
+
+

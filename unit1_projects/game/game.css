@@ -1,0 +1,26 @@
+#main {
+	width:100%;
+	opacity:0;
+	margin: 0 auto;
+	text-align: center;
+}
+img {
+	width:100%;
+	opacity:0;
+}
+body {
+	font: 1em Helvetica, arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight:300;
+	color: #333333;
+	margin:2em;
+	/*background:url("subway-lines.png");*/
+	position:absolute;
+}
+.vis {
+	opacity: 1.0!important;
+	-webkit-transition: background 1.5s linear;
+	-moz-transition: background 1.5s linear;
+	-o-transition: background 1.5s linear;
+	-ms-transition: background 1.5s linear;
+	transition: background 1.5s linear;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/blog.css">
+	</head>
+
+	<body>
+		<div id="main">
+			<h1>Ruby vs Javascript</h1>
+			<h3>tl;dr</h3>
+			<p>Use both.</p>
+			<h3>tl;dr +1 </h3>
+			<p>Use ruby for backend and javascript for frontend.</p>
+			<h3>tl;dr +2</h3>
+			<p>Ruby is excellent for writing very semantic code and handling backend operations via ruby frameworks such as Rails, Sinatra, etc. Javascript creates far greater front-end functionality and can be used in conjunction with ruby frameworks or with solely with a javascript framework</p>
+			<h3>The whole story</h3>
+			<p>The current climate of javascript vs ruby frameworks is a bit volatile. Ruby on Rails can typically create more stable apps at a faster rate of development than current javascript frameworks such as Angular, Ember, or even the 'MEAN' stack of frameworks. However, these javascript frameworks are currently trumping rails in user experience. In response, many developers are currently building apps with both frameworks. A javascript framework is often found handling the front-end of the application while rails continues to support the back-end. Although this does tend to create a larger, more complicated codebase, it does result in the best of both worlds. So the current short answer to ruby vs. javascript is "use both".</p>
+
+
+
+
+
+
+
+
+
+		</div>
+
+
+
+		<script>
+		var backgrounds_array = [
+			"alchemy.gif",
+			"brijan.gif",
+			"bunting-flag.png",
+			"escape-flight.png",
+			"flowers.jpg",
+			"kitty.png",
+			"leather-nunchuck.png",
+			"magnus-2051.png",
+			"nyc-candy.png",
+			"plaid.jpg",
+			"quake.png",
+			"retro-furnish.png",
+			"ripples.jpg",
+			"science.png",
+			"subway-lines.png",
+			"sushi.png"
+		];
+		var selection = Math.floor((Math.random() * backgrounds_array.length));
+		console.log(selection);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(images/" + background + ")";
+		};
+
+
+
+		</script>
+	</body>
+</html>

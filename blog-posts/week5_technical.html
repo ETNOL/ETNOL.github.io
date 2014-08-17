@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/blog.css">
+	</head>
+
+	<body>
+		<div id="main">
+			<h1>Object Oriented Design (OOP)</h1>
+			<p>OOP is about structuring your program like physical objects.  Interestingly, everything in #Ruby is an object.  But what is an object?  You have things called <strong>classes</strong>, like "box" or "user", that act like a noun.  You have <strong>variables</strong>,  like "size", "weight", "length", or "status", that describe the object similar to adjectives.  And you have <strong>methods</strong>,  like "destroy", "calculate", "open", or "new", that act like verbs the object can perform.</p>
+
+
+			<p>Lets look at a class now that contains these concepts:</p>
+
+			<p class="code">
+				class Firearm<br><br>
+				&nbsp;&nbsp;def initialize<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;@ammo = 10<br>
+				&nbsp;&nbsp;end<br><br>
+				&nbsp;&nbsp;def ammo<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;@ammo<br>
+				&nbsp;&nbsp;end<br><br>
+				&nbsp;&nbsp;def shoot<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;puts "Bang!"<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;@ammo -= 1<br>
+				&nbsp;&nbsp;end<br>
+				end<br>
+
+
+
+
+
+			<p>Now I create one of these objects using #new and see how I can interact with it.
+			</p>
+
+			<p>First, I make a variable to represent this particular instance, or version, of our Firearm.</p>
+
+			<p class="code">irb(main):001:0&gt;glock_27 = Firearm.new
+						 =&gt; #</p>
+
+			<p>Now I use #ammo to check our ammunition</p>
+
+			<p class="code">irb(main):002:0&gt;glock_27.ammo
+						=&gt; 10</p>
+
+			<p>And here I #shoot which reduces our ammunition by 1.</p>
+
+			<p class="code">irb(main):003:0&gt;glock_27.shoot<br>"Bang!"<br>
+						=&gt;9</p>
+
+
+			 <p>The #new method I called created a single, stand-alone instance of our Firearm class.  The instance has its on identity. The class acts as template for the instance. I could continue calling the #new method and create as many instances as we need.  The ammo and shoot methods return messages containing instance-specific information.  #Ammo checks that variable for us while #shoot reduces that variable by 1 and then returns it as well.</p>
+
+
+			<p>Now, I know one of you out there may be saying, "thats nice but a Glock 27 has a standard nine round capacity..."  Oh, well of course. To change ammo inside an instance, I'll need a method to set the instance variable "@ammo".</p>
+
+			<p class="code">
+				def Firearm<br>
+				...<br>
+				&nbsp;&nbsp;def ammo=(ammo)<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;@ammo = ammo<br>
+				&nbsp;&nbsp;end<br>
+				end
+			</p>
+
+
+
+			<p>Again, it looks a little odd having ammo written 4 times in one method.  The 'ammo' in the parentheses  is called an argument.  It could have been represented by any word, but I chose 'ammo' because it accurately describes what information I'm giving the method. The method will use whatever I pass to it to set @ammo.  Now I can use it like so:
+			</p>
+			<p class="code">irb(main):001:0&gt;glock_27.ammo=14<br>
+						=&gt;14
+						<br>irb(main):002:0&gt;glock_27.ammo=9<br>
+						=&gt;9</p>
+
+
+			<p>And broken down for brevity:</p>
+
+
+			<p class="code">irb(main):001:0&gt;glock_27(our class)
+				<br>.ammo= (our method)
+				<br>20 (our argument)
+				<br>=&gt;20 (The new @ammo value returned to us)</p>
+			<p>So now I have a method that can set our ammo variable.  This is refered to as a 'setter' method. Its counter-part, a 'getter' method, is the #ammo method we already previously made.</p>
+
+
+			<p>So what conclusions can I draw from all this?</p>
+
+			<ol>
+			<li>A class is a template for creating objects.</li>
+			<li>A method is a request for an action or message.</li>
+			<li>A variable is a placeholder for specific data.</li>
+			<li>An instance variable is a placeholder for its own instance of a class.</li>
+		</div>
+
+
+
+		<script>
+		var backgrounds_array = [
+			"alchemy.gif",
+			"brijan.gif",
+			"bunting-flag.png",
+			"escape-flight.png",
+			"flowers.jpg",
+			"kitty.png",
+			"leather-nunchuck.png",
+			"magnus-2051.png",
+			"nyc-candy.png",
+			"plaid.jpg",
+			"quake.png",
+			"retro-furnish.png",
+			"ripples.jpg",
+			"science.png",
+			"subway-lines.png",
+			"sushi.png"
+		];
+		var selection = Math.floor((Math.random() * backgrounds_array.length));
+		console.log(selection);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(images/" + background + ")";
+		};
+
+
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<div class="row" id="game-frame" ng-controller="gameController as game">
+
+	<div id="guessing-frame" class="col-md-4">
+		<form role="form">
+			<div class="form-group">
+			  	<label for="rGuess">Red value</label>
+			  	<input type="number" class="form-control" id="rGuess" placeholder="Red value">
+
+			  	<label for="gGuess">Green value</label>
+			  	<input type="number" class="form-control" id="gGuess" placeholder="Green value">
+
+			  	<label for="bGuess">Blue value</label>
+			  	<input type="number" class="form-control" id="bGuess" placeholder="Blue value">
+			  	<br>
+
+			  	<button type="submit" ng-click="game.guess()" class="btn btn-default">Submit</button>
+			  	<button type="submit" ng-click="game.createCustomerSwatch()" class="btn btn-default">Next Customer</button>
+			</div>
+		</form>
+	</div>
+
+	<div id="user-swatch" class="swatch col-md-4">
+	</div>
+
+	<div id="customer-swatch" class="swatch col-md-4">
+	</div>
+
+</div>
+
+

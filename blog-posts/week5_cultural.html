@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/blog.css">
+	</head>
+
+	<body>
+		<div id="main">
+			<h2>Pair with me.</h2>
+			<p>
+				Pair programming is a staple of the Dev Bootcamp diet. I've now participated in over a dozen sessions of pairing and have begun developing a primitive feel for driving and navigating efficiently. Verbalizing code is where pairing really helps me. I often find myself thinking "I could figure this out a lot easier if I didn't have to verbalize it to my parter." Thats a key benefit in learning to pair. It teaches me how to speak out my thoughts which leads to overall better code.
+			</p>
+			<h4>Speak first.</h4>
+			<p>
+				I'm doing something wrong if every couple lines of code I write needs a couple of minutes to dissect. I believe code should read like an instruction manual for each method. Not knowing how to explain code effectively severely hinders readability. I can recall a refactoring in a recent pair session where I asked my partner, "What does this method do?" My partner replied, "Doubles every other." Perfect! What did we name that method? double_every_other. At times, its really that simple.
+			</p>
+			<h4>Be the duck.</h4>
+			<p>
+				There is another excellent skill I've slowly been developing during pairs. I call the practice, 'be the duck.' While I'm driving, I try to keep my head out of the 'problem-solving' aspect and, instead, focused on how to code the steps being layed out by the navigator. However, when a navigating partner gets stumped on a step, I still have an important role to play without stepping into the problem solving role. Instead of coming up with the solution, I try to just ask the right questions to re-ignite the fire in the navigator. "What do we already know about this problem?", "Where in the code could this be getting stuck at?"
+			</p>
+			<p>
+				Pairing is definitely 'different' if nothing else. My mind finds different ways of working through a problem, challenge, or project when someone else is there to help me with it. Sometimes it feels 'slower' to be pairing but, looking back, I feel there is a more finely-tuned final product in result.
+			</p>
+		</div>
+
+
+
+		<script>
+		var backgrounds_array = [
+			"alchemy.gif",
+			"brijan.gif",
+			"bunting-flag.png",
+			"escape-flight.png",
+			"flowers.jpg",
+			"kitty.png",
+			"leather-nunchuck.png",
+			"magnus-2051.png",
+			"nyc-candy.png",
+			"plaid.jpg",
+			"quake.png",
+			"retro-furnish.png",
+			"ripples.jpg",
+			"science.png",
+			"subway-lines.png",
+			"sushi.png"
+		];
+		var selection = Math.floor((Math.random() * backgrounds_array.length));
+		console.log(selection);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(images/" + background + ")";
+		};
+
+
+
+		</script>
+	</body>
+</html>

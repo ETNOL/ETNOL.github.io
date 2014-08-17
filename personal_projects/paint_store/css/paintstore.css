@@ -1,0 +1,10 @@
+#game-frame div {
+	min-height:20em;
+
+}
+
+
+.swatch {
+	border:1px solid #333;
+	border-radius:5px;
+}

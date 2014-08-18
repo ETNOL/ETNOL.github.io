@@ -105,14 +105,15 @@
 			$interval.cancel(countdown);
 		}
 
-		this.countdown = $interval(function(){
+		this.countdown = function() {	$interval(function(){
 				self.timeleft--;
 				if (self.timeleft === 0) {
 					self.gameOverScreen();
 				}
 			}, 1000, 120);
+		}
 
-		var init = function($scope) {
+		var init = function() {
 			self.newSwatch();
 			self.timeleft = self.timeLimit;
 			self.countdown();

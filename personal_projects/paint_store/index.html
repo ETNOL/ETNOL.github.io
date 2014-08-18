@@ -2,15 +2,19 @@
 <html ng-app="paintStore">
 
 	<head>
-		<link rel="stylesheet" type="text/css" media="all" href="css/paintstore.css">
 		<link rel="stylesheet" type="text/css" media="all" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/paintstore.css">
+
 		<script type='text/javascript' src='vendor/angular.min.js'></script>
 		<script type='text/javascript' src='vendor/jquery.min.js'></script>
 	</head>
 
-	<body>
+	<body ng-controller="GameCtrl as game">
+		<h1 class="center"> Paint Store Express</h1>
 		<nav-bar></nav-bar>
-		<game></game>
+		<new-game ng-show="game.newGame()"></new-game>
+		<game ng-show="game.gameInProgress()"></game>
+		<game-over ng-show="game.gameOver()"></game-over>
 
 
 		<script type='text/javascript' src='js/paint_store.js'></script>

@@ -1,30 +1,54 @@
-<div class="row" id="game-frame" ng-controller="gameController as game">
 
-	<div id="guessing-frame" class="col-md-4">
+<div class="row" id="game-frame">
+	<div id="guessing-frame" class="top-margin col-sm-4">
+		<div class="top-margin game-label center">
+			Paint Mixer
+		</div>
 		<form role="form">
 			<div class="form-group">
 			  	<label for="rGuess">Red value</label>
-			  	<input type="number" class="form-control" id="rGuess" placeholder="Red value">
+			  	<input type="number" class="form-control" id="rGuess" min="1" max="255" placeholder="1">
 
 			  	<label for="gGuess">Green value</label>
-			  	<input type="number" class="form-control" id="gGuess" placeholder="Green value">
+			  	<input type="number" class="form-control" id="gGuess" min="1" max="255" placeholder="1">
 
 			  	<label for="bGuess">Blue value</label>
-			  	<input type="number" class="form-control" id="bGuess" placeholder="Blue value">
+			  	<input type="number" class="form-control" id="bGuess" min="1" max="255" placeholder="1">
 			  	<br>
 
-			  	<button type="submit" ng-click="game.guess()" class="btn btn-default">Submit</button>
-			  	<button type="submit" ng-click="game.createCustomerSwatch()" class="btn btn-default">Next Customer</button>
+			  	<button type="submit" ng-click="game.preview()" class="btn btn-default">Preview</button>
+			  	<button type="submit" ng-click="game.giveToCustomer()" class="btn btn-default">Give to customer</button>
 			</div>
 		</form>
 	</div>
-
-	<div id="user-swatch" class="swatch col-md-4">
+	<div id="wrapper" class="col-sm-4">
+		<div class="top-margin game-label center">
+			Paint Bucket
+		</div>
+		<div id="paint-can-rim">
+			<div id="paint-can">
+			</div>
+		</div>
 	</div>
-
-	<div id="customer-swatch" class="swatch col-md-4">
+	<div  id="wrapper" class="col-sm-4 top-margin">
+		<div class="top-margin game-label center">
+			Customer's Swatch
+		</div>
+		<div id="customer-swatch"></div>
+		<div id="swatch-handle"></div>
 	</div>
-
 </div>
+<div class="row" id="stats">
+<!-- 		<div id="customer-queue" class="top-margin center col-md-4">
+		Customers in line: {{game.customers}}
+	</div> -->
+	<div id="player-score" class="top-margin center col-sm-6">
+		Your score: {{game.score}}
+	</div>
+	<div id="time" class="top-margin center col-sm-6">
+		Time left: {{game.timeleft}}
+	</div>
+</div>
+
 
 

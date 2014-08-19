@@ -75,6 +75,10 @@ form {
 	right-margin:0 auto;
 }
 
+.stats {
+	font-size:1.2em;
+}
+
 #stats {
 	margin-top:5em;
 }
@@ -82,3 +86,15 @@ form {
 	text-align: center;
 }
 
+.red {
+	color:red;
+}
+
+.black {
+	color:#333;
+}
+
+#scoreFlash {
+	color:gold;
+	padding-left:0.2em;
+}

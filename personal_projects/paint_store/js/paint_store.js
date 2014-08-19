@@ -43,15 +43,18 @@
 		this.customers = 0;
 		this.timeLimit = 120;
 		this.timeleft;
+		this.textColor = "black";
+		this.lastScore;
 
 
+		// Main Game Functions //
 		this.giveToCustomer = function() {
 			self.preview();
-			self.score += self.scoreColor();
+			self.lastScore = self.scoreColor();
+			self.score += self.lastScore;
 			self.customers++;
 			self.newSwatch();
-
-
+			self.flashScore();
 		};
 
 		this.newSwatch = function() {
@@ -80,8 +83,21 @@
 			return score;
 		}
 
+		this.countdown = function() {	$interval(function(){
+				self.timeleft--;
+				if (self.timeleft === 0) {
+					self.gameOverScreen();
+				}
+				else if (self.timeleft < 10) {
+					self.textColor = "red";
+				}
+				else {
+					self.textColor ="black";
+				}
+			}, 1000, self.timeLimit);
+		}
 
-
+		// DOM Window Functions //
 
 		this.newGame = function() {
 			return this.gameState === "newGame";
@@ -102,21 +118,18 @@
 
 		this.gameOverScreen = function() {
 			this.gameState = "gameOver";
-			$interval.cancel(countdown);
+			$interval.cancel(self.countdown);
 		}
 
-		this.countdown = function() {	$interval(function(){
-				self.timeleft--;
-				if (self.timeleft === 0) {
-					self.gameOverScreen();
-				}
-			}, 1000, 120);
-		}
+		// Initialization Functions //
 
 		var init = function() {
+			self.score = 0;
+			self.lastScore = 0;
 			self.newSwatch();
 			self.timeleft = self.timeLimit;
 			self.countdown();
+			$('#scoreFlash').css("visibility", "hidden");
 
 		}
 
@@ -124,8 +137,13 @@
 			init();
 		}
 
+		// Game Effects //
 
-
+		this.flashScore = function() {
+			$('#scoreFlash').css("visibility", "visible").fadeOut(400, function() {
+				$('#scoreFlash').css("display","inline").css("visibility", "hidden");
+			});
+		}
 
 	})
 

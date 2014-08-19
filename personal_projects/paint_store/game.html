@@ -42,10 +42,10 @@
 <!-- 		<div id="customer-queue" class="top-margin center col-md-4">
 		Customers in line: {{game.customers}}
 	</div> -->
-	<div id="player-score" class="top-margin center col-sm-6">
-		Your score: {{game.score}}
+	<div id="player-score" class="top-margin col-sm-6">
+		Your score: {{game.score}}<span id="scoreFlash">{{game.lastScore}}</span>
 	</div>
-	<div id="time" class="top-margin center col-sm-6">
+	<div id="time" class="top-margin {{game.textColor}} center col-sm-6">
 		Time left: {{game.timeleft}}
 	</div>
 </div>

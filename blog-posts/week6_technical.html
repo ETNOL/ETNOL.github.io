@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/blog.css">
+	</head>
+
+	<body>
+		<div id="main">
+			<h2>Inheritance and Composition</h2>
+			<h3>A brief description</h3>
+				<p>In ruby, inheritance is a technique where one class is built off another class for its base. Imagine I have a 'square' class and I now want to expand with a 'cube' class. There are bound to be a lot of similar methods between the two. So the DRY thing to do would be to start your cube class by inheriting your square class. Now cube has all the same methods as square and can add more to fit its own criteria.</p>
+				<p>Composition is also a great way of keeping your code DRY. This technique means using one class within another class. Lets look at the 'cube' class and imagine now we want a 'BoxStore' class that is responsible for making cardboard boxes. We may initialize this class with a template by calling @cube = Cube.new(dimensions). Now again, we have access to all the methods of Cube available within our BoxStore except it is being stored within an instance variable.</p>
+				<h3>So which is better?</h3>
+				<p>Its a loaded question. They both have important roles within object-oriented design. However, I find the most simple method of determining which to apply is to question your two classes relationship. Are your classes an "is-a" relation or are they a "has-a" relation? You can loosely say a cube is a square and a boxstore has a cube. Although that still could be disputed... maybe Cube classes should "have" 6 squares, saved to 6 instance variables. It is a matter of design which means the right answer is usually what works best for you.</p>
+		</div>
+
+
+
+		<script>
+		var backgrounds_array = [
+			"alchemy.gif",
+			"brijan.gif",
+			"bunting-flag.png",
+			"escape-flight.png",
+			"flowers.jpg",
+			"kitty.png",
+			"leather-nunchuck.png",
+			"magnus-2051.png",
+			"nyc-candy.png",
+			"plaid.jpg",
+			"quake.png",
+			"retro-furnish.png",
+			"ripples.jpg",
+			"science.png",
+			"subway-lines.png",
+			"sushi.png"
+		];
+		var selection = Math.floor((Math.random() * backgrounds_array.length));
+		console.log(selection);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(images/" + background + ")";
+		};
+
+
+
+		</script>
+	</body>
+</html>

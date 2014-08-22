@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/blog.css">
+	</head>
+
+	<body>
+		<div id="main">
+			<h2>Stereotype threat</h2>
+			<p>This blog post is suppose to be about how stereotype threats have affected me. I'm a tall, white male from suburban Florida. I have plenty of facial hair, am handsome and intelligent enough to be married to my bright and beautiful wife, and wear a size 12 shoe. I don't think stereotypes affect me. This isn't a way of me 'flexing' my life to you. Its simply my conclusion after considering this possibility for several days.
+			</p>
+			<p>So, instead, here is my opinion on sterotype threats. They suck. The fear and anxiety of falling into or being part of a stereotype is something I wished no one had to live with. But stereotyping, drawing assumptions on a person based solely off their demographic, has certainly be happening since the dawn of time. I don't imagine stereotyping people is going to stop until we're all just one vanilla shade of unisex weirdness. </p>
+			<p>So what can be done about it? Modern societies as a whole has been breaking the molds for nearly a century now. And that needs to continue.
+		</div>
+
+
+
+		<script>
+		var backgrounds_array = [
+			"alchemy.gif",
+			"brijan.gif",
+			"bunting-flag.png",
+			"escape-flight.png",
+			"flowers.jpg",
+			"kitty.png",
+			"leather-nunchuck.png",
+			"magnus-2051.png",
+			"nyc-candy.png",
+			"plaid.jpg",
+			"quake.png",
+			"retro-furnish.png",
+			"ripples.jpg",
+			"science.png",
+			"subway-lines.png",
+			"sushi.png"
+		];
+		var selection = Math.floor((Math.random() * backgrounds_array.length));
+		console.log(selection);
+		var background = backgrounds_array[selection];
+		window.onload = function () {
+			document.body.style.backgroundImage ="url(images/" + background + ")";
+		};
+
+
+
+		</script>
+	</body>
+</html>

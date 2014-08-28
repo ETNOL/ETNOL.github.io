@@ -1,13 +1,10 @@
 (function() {
 
+	// Initialize Angular Module //
 	var app = angular.module("paintStore", []);
 
-	// app.directive("navBar", function() {
-	// 	return {
-	// 		restrict:"E",
-	// 		templateUrl:"nav-bar.html"
-	// 	};
-	// });
+
+	// Basic Directives //
 
 	app.directive("newGame", function() {
 		return {
@@ -30,32 +27,46 @@
 		};
 	});
 
+	// Game Controller //
+
 	app.controller("GameCtrl", function($interval, $scope) {
+		// Using "self" to control for possible scope problems //
 		var self = this;
+		// Only 1 directive can be displayed at a time. gameState controls which is displayed //
 		this.gameState = "newGame";
+		// Swatch RGB Values //
 		var swatchR;
 		var swatchG;
 		var swatchB;
+		// Player Guess RGB Values //
 		var paintR = 0;
 		var paintG = 0;
 		var paintB = 0;
+		// Scoring Vars //
 		this.score = 0;
+		this.lastScore;
 		this.customers = 0;
+		// Set Game Time Limit //
 		this.timeLimit = 120;
 		this.timeleft;
+		// Time Limit Text Effect //
 		this.textColor = "black";
-		this.lastScore;
+
 
 
 		// Main Game Functions //
 		this.giveToCustomer = function() {
 			self.preview();
-			self.lastScore = self.scoreColor();
-			self.score += self.lastScore;
+			self.updateScore();
 			self.customers++;
 			self.newSwatch();
 			self.flashScore();
 		};
+
+		this.updateScore = function () {
+			self.lastScore = self.scoreColor();
+			self.score += self.lastScore;
+		}
 
 		this.newSwatch = function() {
 			swatchR = Math.floor(Math.random() * 255);
@@ -72,7 +83,10 @@
 			$("#paint-can").css("background-color", "rgb(" + paintR + "," + paintG +
 				"," + paintB + ")" );
 		}
-
+		// Sets a base score of 200, deducts for each point of variance between the swatch
+		// values and the customer's paint guess values //
+		// BUG: Possible to spam a guess of ~130 and slowly increase score over enough guesses.
+		// I ran up a score of around 3k+ over 832 customers this way.
 		this.scoreColor = function() {
 			score = 200;
 			rVarience = Math.abs(swatchR - paintR);
@@ -82,7 +96,8 @@
 			score = score - rVarience - gVarience - bVarience;
 			return score;
 		}
-
+		// Needs to be refactored... Too many responsibilities.
+		// Performs countdown, triggers 'game over' if 0, triggers red time text if under 10.
 		this.countdown = function() {	$interval(function(){
 				self.timeleft--;
 				if (self.timeleft === 0) {
@@ -98,6 +113,8 @@
 		}
 
 		// DOM Window Functions //
+		// Basic setter / getter directive controls //
+		// No setter for new game, directive only shows once at initial page load //
 
 		this.newGame = function() {
 			return this.gameState === "newGame";
@@ -118,7 +135,7 @@
 
 		this.gameOverScreen = function() {
 			this.gameState = "gameOver";
-			$interval.cancel(self.countdown);
+			$interval.cancel(self.countdown); // Does not work, timer ends via last $interval param
 		}
 
 		// Initialization Functions //

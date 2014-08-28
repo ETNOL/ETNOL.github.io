@@ -11,12 +11,12 @@
 	</head>
 
 	<body ng-controller="GameCtrl as game">
+
 		<h1 class="center"> Paint Store Express</h1>
-		<nav-bar></nav-bar>
+
 		<new-game ng-show="game.newGame()"></new-game>
 		<game ng-show="game.gameInProgress()"></game>
 		<game-over ng-show="game.gameOver()"></game-over>
-
 
 		<script type='text/javascript' src='js/paint_store.js'></script>
 	</body>

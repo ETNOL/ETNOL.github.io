@@ -1,7 +1,7 @@
 
 <div class="row">
 	<div class="col-md-12 center">
-		<p>Match as many customer's paint swatches as fast as you can in 2 minutes!<br>
+		<p>Match as many customer's paint swatches as fast as you can in {{ (game.timeLimit / 60) }} minutes!<br>
 			The closer the match, the more points awarded! Be careful though! Bad matches will reduce your total points! Good Luck!</p>
 			<button id="newGameButton" class="btn btn-default" ng-click="game.startNewGame()">Start New Game!</button>
 

@@ -7,13 +7,13 @@
 		<form role="form">
 			<div class="form-group">
 			  	<label for="rGuess">Red value</label>
-			  	<input type="number" class="form-control" id="rGuess" min="1" max="255" value="1">
+			  	<input type="range" class="form-control" id="rGuess" min="1" max="255" value="1">
 
 			  	<label for="gGuess">Green value</label>
-			  	<input type="number" class="form-control" id="gGuess" min="1" max="255" value="1">
+			  	<input type="range" class="form-control" id="gGuess" min="1" max="255" value="1">
 
 			  	<label for="bGuess">Blue value</label>
-			  	<input type="number" class="form-control" id="bGuess" min="1" max="255" value="1">
+			  	<input type="range" class="form-control" id="bGuess" min="1" max="255" value="1">
 			  	<br>
 
 			  	<button type="submit" id="previewButton" ng-click="game.preview()" class="btn btn-default">Preview</button>
